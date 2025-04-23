@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+
+    /* Paleta de colores */
+    --color-background: #ffe6f0; 
+    --color-footer: #ffb6d9;
+    --color-titulos: #ed5688; 
+    --color-texto: #a64d79; 
+    --color-boton: #ff99cc; 
+    --color-boton-hover: #ff66b2; 
+    --color-card-background: rgba(255, 182, 219, 0.4); 
+    --color-shadow1: rgba(255, 140, 180, 0.8); 
+    --color-shadow2: rgba(255, 105, 180, 0.8); 
+    --color-shadow3: rgba(255, 51, 153, 0.8); 
+    --color-shadow4: rgba(204, 0, 102, 0.7); 
+
+    /* Tamaño de fuentes */
+    --font-size-titulos: 20px;
+    --font-size-texto: 0.9em;
+    --font-size-boton: 1.2em;
+
+    /* Tipografía */
+    --font-family-titulos: "Pacifico", cursive;
+    --font-family-texto: "Quicksand", sans-serif;
+    --font-family-boton: "algerian", sans-serif;
+}
+
+body {
+    font-family: var(--font-family-texto);
+    background-color: var(--color-background);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-titulos);
+    color: var(--color-titulos);
+    font-style: normal;
+    text-shadow: 1px 1px 2px var(--color-shadow1);
+}
+span {
+    color: var(--color-texto);
+    font-family: var(--font-family-texto);
+    font-size: var(--font-size-texto);
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px var(--color-shadow2);
+}
+
+/* Header */
+header {
+    background-color: var(--color-background);
+    padding: 20px;
+    text-align: center;
+    font-size: var(--font-size-titulos);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+select {
+    background-color: var(--color-card-background);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em;
+    font-size: var(--font-size-boton);
+    text-align: center;
+    color: var(--color-texto);
+    font-family: var(--font-family-texto);
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    background-color: var(--color-titulos); 
+}
+
+/* Basic slider */
+#BasicSlaider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    background-color: var(--color-boton);
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: var(--font-size-boton);
+    text-align: center;
+    clip-path: circle();
+    color: white;
+    transition: all 0.3s;
+    font-family: var(--font-family-texto);
+}
+button:hover {
+    background-color: var(--color-boton-hover);
+}
+
+svg {
+    width: 1em;
+    text-align: center;
+    fill: var(--color-texto);
+}
+
+#slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+    overflow: hidden;
+}
+#slider img {
+    object-fit: cover;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/*Custom slider*/
+#CustomSlaider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+}
+.formcustom{
+    width: 100%;
+    padding: 0.1em;
+    background-color: var(--color-card-background);
+}
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+}
+.formcustom label{
+    color: var(--color-texto);
+    font-family: var(--font-family-texto);
+    font-size: var(--font-size-boton);
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px var(--color-shadow3);
+}
+.formcustom input{
+    width: 30%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 10px;
+}
+.formcustom input[type = "submit"]
+{
+    background-color: var(--color-boton);
+    color: white;
+    font-size: var(--font-size-boton);
+    font-family: var(--font-family-texto);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.formcustom input[type = "submit"]:hover{
+    background-color: var(--color-boton-hover);
+    transform: translate(-5px, 0);
+    box-shadow: 0px 0px 15px var(--color-shadow4);
+}
+.formcustom input:focus{
+    outline: none;
+}
+.formcustom input::placeholder{
+    color: var(--color-texto);
+    text-align: center;
+}
+#CustomSlaider button {
+    background-color: var(--color-boton);
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: var(--font-size-boton);
+    text-align: center;
+    clip-path: circle();
+    color: white;
+    transition: all 0.3s;
+    font-family: var(--font-family-texto);
+}
+.slaidercustomcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+}
+.slaidercustomcontainer button{
+    background-color: var(--color-boton);
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: var(--font-size-boton);
+    text-align: center;
+    clip-path: circle();
+    color: white;
+    transition: all 0.3s;
+    font-family: var(--font-family-texto);
+}
+.slaidercustomcontainer button:hover {
+    background-color: var(--color-boton-hover);
+}
+.slaidercustomcontainer svg {
+    width: 1em;
+    text-align: center;
+    fill: var(--color-texto);
+}
+.slaidercustomcontainer #slidercustom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 450px;
+    overflow: hidden;
+}
+.slaidercustomcontainer #slidercustom img {
+    object-fit: cover;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-footer);
+    color: white;
+    font-weight: bold;
+    font-family: var(--font-family-texto);
+}
+
+/* Animación */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
